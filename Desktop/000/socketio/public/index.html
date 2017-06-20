@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="register" class="row">
+                <div class="col-md-12">
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label>Enter Username:</label>
+                            <input placeholder="Enter your name" id="username" autocomplete="off" class="form-control" />
+                            <br>
+                            <input type="submit" class="btn btn-primary" value="Login" />
+                            <div id="error-container"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="onlineUsers" class="row">
+                <div class="col-md-4">
+                    <div class="well shadow">
+                        <h3>Online Users</h3>
+                    <ul class="list-group" id="users"></ul>
+                </div>
+            </div>
+            <div class="col-md-5">
+            <ul id="messages"></ul>
+            <form  id="messageForm">
+                <span class="connected"></span>
+                <div class="form-group">
+                    <input placeholder="Message" id="m" autocomplete="off" class="form-control" />
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <span class="chat"></span>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>
