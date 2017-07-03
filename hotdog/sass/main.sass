@@ -1,0 +1,264 @@
+@import _breakpoints
+*
+  box-sizing: border-box
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+  
+
+.container
+  max-width: 1440px
+  width: 100%
+  margin: 0 auto  
+  position: relative
+
+
+a 
+  text-decoration: none
+
+
+
+.header
+  position: relative
+  padding-bottom: 80px
+
+  &__hotDogImages
+
+  &__row
+    display: -moz-box      
+    display: -webkit-flex   
+    display: flex
+    flex-flow: row nowrap
+    overflow-x: hidden
+
+
+  &__nav
+    // height: 100px
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -85px
+    display: flex
+    justify-content: center
+    align-items: center
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,.11)
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,.11)
+    box-shadow: 0 2px 8px rgba(0,0,0,.11)
+    padding: 39px 0 
+    background-color: #fff
+    +breakpoint(xxxs)
+      padding: 0
+      bottom: -165px
+    +breakpoint(xxs)
+      padding: 0
+      bottom: -165px  
+
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      display: flex
+      +breakpoint(xxxs)
+        flex-direction: column
+        align-items: center
+      +breakpoint(xxs)
+        flex-direction: column
+        align-items: center  
+
+    
+    li
+      margin-left: 70px
+      +breakpoint(xxxs)
+        margin-left: 0
+        padding: 10px 
+      +breakpoint(xxs)
+        margin-left: 0
+        padding: 10px 
+
+
+.header__row 
+  img
+    height: 30vh
+    width: 16.666vw
+    object-fit: cover
+    +breakpoint(sm)
+      width: 20.666vw
+    +breakpoint(xs)
+      width: 25vw
+    +breakpoint(xxs)
+      width: 33.3vw
+    +breakpoint(xxxs)
+      width: 50.3vw  
+
+// .header__row 
+//   img
+//     +breakpoint(sm)
+//       &:nth-last-child(1)
+//         display: none
+
+.header
+  a
+    font-family: 'Open Sans'
+    font-size: 20px
+    text-transform: uppercase
+    color: #2e2e2e 
+    font-weight: 600
+
+
+.instagram
+  color: #fff
+  position: absolute
+  right: 20px
+  top: 15px
+
+//section id="introduction" starts
+#introduction
+  padding: 175px 0 175px 0
+  background: #fbfafa
+  // +breakpoint(xxxs)
+  //   padding-top: 175px  
+  // +breakpoint(xxs)
+  //   padding-top: 175px  
+  // +breakpoint(xs)
+  //   padding-top: 175px  
+
+  h1
+    font-family: 'Open Sans'
+    font-weight: 100
+    font-size: 3.5em
+    color: #555559
+    max-width: 17em
+    margin: 0 auto
+    padding: 0 15px
+    +breakpoint(xxxs)
+      font-size: 2.5em
+    &:before
+      content: ''
+      display: block
+      background-image: url(../img/hotdogicon.png)
+      background-repeat: no-repeat
+      background-position: center center
+      height: 100px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 60px
+      width: 100px
+
+  p
+    text-align: center
+
+
+
+.btn
+  width: 310px
+  display: block
+  -webkit-border-radius: 6px
+  -moz-border-radius: 6px
+  border-radius: 6px
+  background-color: #286782
+  font-weight: 600
+  color: #fff
+  padding: 25px 30px
+  text-align: center
+  margin: 0 auto
+  margin-top: 75px
+
+
+//section id="introduction" ends
+
+//section class="menu" starts
+
+.menu__item
+  display: flex
+  +breakpoint(xxxs)
+    flex-direction: column-reverse
+  +breakpoint(xxs)
+    flex-direction: column-reverse  
+  +breakpoint(xs)
+    flex-direction: column-reverse     
+
+.menu__item_img
+  min-width: 50%
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+.menu__item
+  &:nth-child(even)
+    .menu__item_img
+      order: 1
+      +breakpoint(xxxs)
+        order: 2
+      +breakpoint(xxs)
+        order: 2 
+      +breakpoint(xs)
+        order: 2  
+
+    .menu__item_wrap
+      order: 2 
+      +breakpoint(xxxs)
+        order: 1
+      +breakpoint(xxs)
+        order: 1  
+      +breakpoint(xs)
+        order: 1  
+
+       
+
+.menu__item_wrap
+  display: flex
+  min-width: 50%
+  flex-flow: column 
+  align-items: flex-start
+  justify-content: center
+  padding: 0 130px
+  +breakpoint(xxxs)
+    padding: 0 15px
+     
+
+
+  p
+    font-size: 1.125em
+    font-weight: 300
+
+  h4
+    font-weight: 700
+    font-size: 1.5em
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: -60px
+      top: 50%
+      display: inline-block
+      width: 31px
+      height: 2px
+      background-color: #286782
+
+    
+//section class="menu" ends
+
+//footer class="footer" starts
+
+.footer
+  padding: 0 20px
+  background-color: #efefef
+  font-size: 0.875em
+
+
+.footer__inner
+  height: 75px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  +breakpoint(xxxs)
+    flex-direction: column
+    align-items: flex-start
+    padding-top: 10px
+    padding-bottom: 10px
+
